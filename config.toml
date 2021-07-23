@@ -12,7 +12,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 [Author] # Used in authorbox
   name = "にゃご"
   bio = "テレワーク太り"
-  avatar = "img/avatar.png"
+  avatar = "img/nyago-big.png"
 
 [Params]
   description = "Nyago's personal blog about everything, mainly about digital stuff" # Site description. Used in meta description
@@ -22,7 +22,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   twitter_cards = true # Enable Twitter Cards if true
   readmore = true # Show "Read more" button in list if true
   authorbox = false # Show authorbox at bottom of pages if true
-  toc = true # Enable Table of Contents
+  toc = false # Enable Table of Contents
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   # post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
   post_meta = ["date", "categories"] # Order of post meta information
@@ -46,13 +46,13 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 [Params.logo]
   # image = "img/placeholder.png" # Logo image. Path relative to "static"
   image = "img/nyago-big.png" # Logo image. Path relative to "static"
-  title = "イロイロラボ！ - iroirolab.com" # Logo title, otherwise will use site title
-  subtitle = "にゃごのデジタル実験室" # Logo subtitle
+  title = "イロイロラボ！ iroirolab.com" # Logo title, otherwise will use site title
+  subtitle = "にゃごのデジタル実験室(とか戯言とか)" # Logo subtitle
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
   list = "left"  # Configure layout for list pages
-  single = false # Configure layout for single pages
+  single = true # Configure layout for single pages
   # Enable widgets in given order
   # widgets = ["search", "recent", "categories", "taglist", "social"]
   widgets = ["recent", "categories", "taglist", "social"]
@@ -82,6 +82,6 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 #   url = "https://youtube.com/user/username"
 #   icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
 
-[[Params.widgets.social.custom]]
-  title = "My Home Page"
-  url = "http://example.com"
+# [[Params.widgets.social.custom]]
+#   title = "My Home Page"
+#   url = "http://example.com"
