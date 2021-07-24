@@ -26,7 +26,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   # post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
   post_meta = ["date", "categories"] # Order of post meta information
-  mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  mainSections = ["post", "news"] # Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "2006-01-02" # Change the format of dates
   mathjax = true # Enable MathJax
   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
@@ -51,11 +51,11 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
-  list = "left"  # Configure layout for list pages
+  list = "right"  # Configure layout for list pages
   single = true # Configure layout for single pages
   # Enable widgets in given order
   # widgets = ["search", "recent", "categories", "taglist", "social"]
-  widgets = ["recent", "categories", "taglist", "social"]
+  widgets = ["sidemenu", "recent", "categories", "taglist", "social"]
   # alternatively "ddg-search" can be used, to search via DuckDuckGo
   # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
 
@@ -77,7 +77,11 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   # email = "example@example.com"
 
 # Custom social links
-# [[Params.widgets.social.custom]]
+[[Params.widgets.social.custom]]
+    title = "Reddit"
+    url = "https://reddit.com/user/nyagbon"
+    # icon = "svg/iconmonstr-reddit-4.svg"
+    icon = "svg/reddit-logo-2436.svg"
 #   title = "Youtube"
 #   url = "https://youtube.com/user/username"
 #   icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
