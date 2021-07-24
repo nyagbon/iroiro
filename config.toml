@@ -14,9 +14,9 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   bio = "テレワーク太り"
   avatar = "img/nyago-big.png"
 
-[Permlinks]
-  post = "/hoge/:sections/:year/:month/:slug/"
-  news = "/fuga/:sections/:year/:month/:slug/"
+[Permalinks]
+  post = "/:sections/:year/:month/:slug/"
+  news = "/:sections/:year/:month/:slug/"
 
 [Params]
   description = "Nyago's personal blog about everything, mainly about digital stuff" # Site description. Used in meta description
