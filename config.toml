@@ -38,6 +38,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   customCSS = ["css/custom.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
+  share = true
 
 [Params.style.vars]
   highlightColor = "#e22d30" # Override highlight color
@@ -93,3 +94,4 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 # [[Params.widgets.social.custom]]
 #   title = "My Home Page"
 #   url = "http://example.com"
+

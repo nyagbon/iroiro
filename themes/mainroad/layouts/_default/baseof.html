@@ -46,8 +46,11 @@
 		{{ template "_internal/google_analytics_async.html" . }}
 		{{- end }}
 	{{- end }}
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 </head>
 <body class="body">
+	{{- partial "back-to-top.html" . }}
 	<div class="container container--outer">
 		{{ partial "header" . }}
 		<div class="wrapper flex">
