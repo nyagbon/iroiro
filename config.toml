@@ -14,6 +14,10 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   bio = "テレワーク太り"
   avatar = "img/nyago-big.png"
 
+[Permlinks]
+  post = "/hoge/:sections/:year/:month/:slug/"
+  news = "/fuga/:sections/:year/:month/:slug/"
+
 [Params]
   description = "Nyago's personal blog about everything, mainly about digital stuff" # Site description. Used in meta description
   copyright = "iroirolab.com" # Footer copyright holder, otherwise will use site title
@@ -55,7 +59,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   single = true # Configure layout for single pages
   # Enable widgets in given order
   # widgets = ["search", "recent", "categories", "taglist", "social"]
-  widgets = ["sidemenu", "recent", "categories", "taglist", "social"]
+  widgets = ["recent", "categories", "taglist", "social"]
   # alternatively "ddg-search" can be used, to search via DuckDuckGo
   # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
 
