@@ -1137,6 +1137,9 @@ textarea {
 }
 
 .widget-social__link-icon {
+	text-align: center;
+	width: 24px;
+	font-size: 20px;
 	margin: 0 5px 0 0;
 	vertical-align: middle;
 	fill: #fff;
@@ -1225,36 +1228,36 @@ textarea {
 .sns_button:hover {
 	box-shadow: inset 0 0 0 22px #eaeaea;
 }
-  
+
 .sns_button + .sns_button {
 	margin: 0 0 0 6px;
 }
-  
+
 .twitter:hover a {
 	color: #1B95E0;
 }
-  
+
 .facebook:hover a {
 	color: #3B5999;
 }
-  
+
 .instagram:hover a {
 	color: #2b5c84;
 }
-  
+
 .pocket:hover a {
 	color: #EE4056;
 }
-  
+
 .hatena:hover a {
 	color: #4BA3D9;
 }
-  
+
 .fa-hatena:before {
 	content: "B!";
 	font-family: Verdana;
 	font-weight: bold
-}  
+}
 
 /* Media Queries */
 @media screen and (max-width: 1475px) {

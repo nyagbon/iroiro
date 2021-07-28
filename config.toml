@@ -86,7 +86,16 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
     title = "Reddit"
     url = "https://reddit.com/user/nyagbon"
     # icon = "svg/iconmonstr-reddit-4.svg"
-    icon = "svg/reddit-logo-2436.svg"
+    # icon = "svg/reddit-logo-2436.svg"
+    icon = "fab fa-reddit"
+
+[[Params.widgets.social.custom]]
+    title = "RSS"
+    url = "/index.xml"
+    # icon = "svg/iconmonstr-reddit-4.svg"
+    icon = "fas fa-rss"
+    # icon = "svg/reddit-logo-2436.svg"
+
 #   title = "Youtube"
 #   url = "https://youtube.com/user/username"
 #   icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
