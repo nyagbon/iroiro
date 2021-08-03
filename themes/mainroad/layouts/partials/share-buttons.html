@@ -2,46 +2,65 @@
 
 <style>
   .share-buttons-container {
-      display: inline-block;
+      display: table;
       width: 100%;
+      table-layout: fixed;
+      background-color: blue;
   }
-.share-buttons {
-    text-align: center;
-    list-style-type: none;
-    vertical-align: middle;
-    width: 160px;
-    margin: 0 auto;
-}
-.share-buttons > li {
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 32px;
-    float: left;
-    text-align: center;
-    margin: 0 10px 0 0;
-}
-.share-buttons > li:hover {
-    cursor: pointer;
-}
-.share-buttons > li.facebook {color: #3B5998;}
-.share-buttons > li.twitter {color: #55ACEE;}
-.share-buttons > li.linkedin {color: #0077b5;}
-.share-buttons > li.pocket {color: #0077b5;}
-.share-buttons > li.pinterest {color: #CB2027;}
-.share-buttons > li.gplus {color: #dd4b39;}
+  .share-buttons {
+      display: inline-block;
+      text-align: center;
+      list-style-type: none;
+      width: 80%;
+      margin: 0 auto;
+      vertical-align: middle;
+      background-color: green;
+  }
+  .share-buttons > li {
+      align-items: center;
+      position: relative;
+      font-size: 24px;
+      float: left;
+      text-align: center;
+      margin: 0 0px 0 0;
+      vertical-align: middle;
+      background-color: green;
+  }
+  .share-buttons > li:hover {
+      cursor: pointer;
+  }
+  .share-buttons > li.facebook {color: #3B5998;}
+  .share-buttons > li.twitter {color: #55ACEE;}
+  .share-buttons > li.linkedin {color: #0077b5;}
+  .share-buttons > li.pocket {color: #0077b5;}
+  .share-buttons > li.pinterest {color: #CB2027;}
+  .share-buttons > li.gplus {color: #dd4b39;}
 </style>
 
 {{- /* <-- https://www.gizmodo.jp/2021/07/highly-fatal-monkey-b-virus.html を参考に --> */ -}}
 
 <div class="share-buttons-container">
-<ul class="share-buttons">
-  <li class="facebook" title="Share this on Facebook">
+  <ul class="share-buttons">
     {{- /* <!-- see https://webdesign-trends.net/entry/3632 --> */ -}}
-    <a href="http://www.facebook.com/share.php?u={{ $pageurl }}" rel="nofollow" target="_blank"><i class="fab fa-facebook-square"></i></li>
-  <li class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/intent/tweet?text={{.Title}}&url={{ $pageurl }}');"><i class="fab fa-twitter-square"></i></li>
-  <li class="line" title="Share on LINE" onclick="window.open('http://line.me/R/msg/text/?{{ $pageurl }}'"><div class="line-it-button" data-lang="ja" data-type="share-b" data-ver="3" data-url="https://social-plugins.line.me/ja/how_to_install" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
- <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script></li>
-  <li class="hatena" title="Bookmark on hatena"><a href="https://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="touch-counter" data-hatena-bookmark-width="28" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
-</ul>
+    <li class="facebook" title="Share this on Facebook">
+      <a href="http://www.facebook.com/share.php?u={{ $pageurl }}" rel="nofollow" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+    </li>
+    <li class="twitter" title="Share this on Twitter">
+      <a href="https://twiter.com/share?url={{ $pageurl }}">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+    </li>
+    <li class="hatena" title="Bookmark on hatena">
+      <a href="http://b.hatena.ne.jp/add?mode=confirm&url={{ $pageurl }}&title={{ .Title }}" target="_blank" rel="nofollow">
+        B!
+      </a>
+    </li>
+    <li class="pocket" title="Save to Pocket">
+      <a href="http://getpocket.com/edit?url={URL}&title={ページのタイトル}" rel="nofollow" rel="nofollow" target="_blank">
+        <i class="fab fa-get-pocket"></i>
+      </a>
+    </li>
+  </ul>
 </div>
