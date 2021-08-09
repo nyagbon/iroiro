@@ -1,6 +1,8 @@
 @import "balloon.css";
 
 .share_outer {
+    border-top: 1px dotted #ebebeb;
+    border-bottom: 1px dotted #ebebeb;
     text-align: center;
 }
 .share_inner {
