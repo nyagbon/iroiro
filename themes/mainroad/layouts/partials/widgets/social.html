@@ -5,7 +5,7 @@
 		{{- with .Site.Params.widgets.social.facebook }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/{{ . }}" target="_blank">
-				{{ partial "svg/facebook.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-facebook widget-social__link-icon"></i>
 				<span>Facebook</span>
 			</a>
 		</div>
@@ -13,7 +13,7 @@
 		{{- with .Site.Params.widgets.social.twitter }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/{{ . }}" target="_blank">
-				{{ partial "svg/twitter.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-twitter widget-social__link-icon"></i>
 				<span>Twitter</span>
 			</a>
 		</div>
@@ -21,7 +21,7 @@
 		{{- with .Site.Params.widgets.social.instagram }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/{{ . }}" target="_blank">
-				{{ partial "svg/instagram.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-instagram widget-social__link-icon"></i>
 				<span>Instagram</span>
 			</a>
 		</div>
@@ -29,7 +29,7 @@
 		{{- with .Site.Params.widgets.social.linkedin }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/{{ . }}" target="_blank">
-				{{ partial "svg/linkedin.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-linkedin-in widget-social__link-icon"></i>
 				<span>LinkedIn</span>
 			</a>
 		</div>
@@ -37,7 +37,7 @@
 		{{- with .Site.Params.widgets.social.telegram }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/{{ . }}" target="_blank">
-				{{ partial "svg/telegram.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-telegram widget-social__link-icon"></i>
 				<span>Telegram</span>
 			</a>
 		</div>
@@ -45,7 +45,7 @@
 		{{- with .Site.Params.widgets.social.github }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/{{ . }}" target="_blank">
-				{{ partial "svg/github.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-github widget-social__link-icon"></i>
 				<span>GitHub</span>
 			</a>
 		</div>
@@ -53,7 +53,7 @@
 		{{- with .Site.Params.widgets.social.gitlab }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="GitLab" rel="noopener noreferrer" href="https://gitlab.com/{{ . }}" target="_blank">
-				{{ partial "svg/gitlab.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-gitlab widget-social__link-icon"></i>
 				<span>GitLab</span>
 			</a>
 		</div>
@@ -61,7 +61,7 @@
 		{{- with .Site.Params.widgets.social.bitbucket }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Bitbucket" rel="noopener noreferrer" href="https://bitbucket.org/{{ . }}" target="_blank">
-				{{ partial "svg/bitbucket.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fab fa-bitbucket widget-social__link-icon"></i>
 				<span>Bitbucket</span>
 			</a>
 		</div>
@@ -69,7 +69,7 @@
 		{{- with .Site.Params.widgets.social.email }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Email" href="mailto:{{ . }}">
-				{{ partial "svg/email.svg" (dict "class" "widget-social__link-icon") }}
+				<i class="fas fa-envelope widget-social__link-icon"></i>
 				<span>{{ . }}</span>
 			</a>
 		</div>
@@ -79,7 +79,7 @@
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="{{ .title }}" rel="noopener noreferrer" href="{{ .url }}" target="_blank">
 				{{- if .icon }}
-					{{ partial .icon (dict "class" "widget-social__link-icon") }}
+				<i class="{{ .icon }} widget-social__link-icon"></i>
 				{{- end }}
 				<span>{{ .title }}</span>
 			</a>
