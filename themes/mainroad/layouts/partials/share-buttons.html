@@ -1,47 +1,25 @@
-{{ $pageurl := .Permalink }}
-
-<style>
-  .share-buttons-container {
-      display: inline-block;
-      width: 100%;
-  }
-.share-buttons {
-    text-align: center;
-    list-style-type: none;
-    vertical-align: middle;
-    width: 160px;
-    margin: 0 auto;
-}
-.share-buttons > li {
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 32px;
-    float: left;
-    text-align: center;
-    margin: 0 10px 0 0;
-}
-.share-buttons > li:hover {
-    cursor: pointer;
-}
-.share-buttons > li.facebook {color: #3B5998;}
-.share-buttons > li.twitter {color: #55ACEE;}
-.share-buttons > li.linkedin {color: #0077b5;}
-.share-buttons > li.pocket {color: #0077b5;}
-.share-buttons > li.pinterest {color: #CB2027;}
-.share-buttons > li.gplus {color: #dd4b39;}
-</style>
-
-{{- /* <-- https://www.gizmodo.jp/2021/07/highly-fatal-monkey-b-virus.html を参考に --> */ -}}
-
-<div class="share-buttons-container">
-<ul class="share-buttons">
-  <li class="facebook" title="Share this on Facebook">
-    {{- /* <!-- see https://webdesign-trends.net/entry/3632 --> */ -}}
-    <a href="http://www.facebook.com/share.php?u={{ $pageurl }}" rel="nofollow" target="_blank"><i class="fab fa-facebook-square"></i></li>
-  <li class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/intent/tweet?text={{.Title}}&url={{ $pageurl }}');"><i class="fab fa-twitter-square"></i></li>
-  <li class="line" title="Share on LINE" onclick="window.open('http://line.me/R/msg/text/?{{ $pageurl }}'"><div class="line-it-button" data-lang="ja" data-type="share-b" data-ver="3" data-url="https://social-plugins.line.me/ja/how_to_install" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
- <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script></li>
-  <li class="hatena" title="Bookmark on hatena"><a href="https://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="touch-counter" data-hatena-bookmark-width="28" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
-</ul>
+{{ if ne .Params.share false}}
+<div class="share_outer">
+  <div class="share_inner">
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" class="share_button twitter" aria-label="Share on Twtter" data-balloon-pos="up"><i class="fab fa-twitter"></i></a>
+    <a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}&t={{ .Title }}" target="_blank" class="share_button facebook" aria-label="Share on Facebook" data-balloon-pos="up"><i class="fab fa-facebook"></i></a>
+    <a href="https://getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share_button pocket" aria-label="Save to Pocket" data-balloon-pos="up"><i class="fab fa-get-pocket"></i></a>
+    <a href="https://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share_button hatena" aria-label="Bookmark on Hatena" data-balloon-pos="up"><i class="fab fa-hatena"></i></a>
+    <span class="share_button copy" aria-label="Copy URL" data-balloon-pos="up" onclick="copyurl()"><i class="fas fa-clone"></i></span>
+    <script>
+      function copyurl() {
+          const element = document.createElement('input');
+          element.value = location.href;
+          document.body.appendChild(element);
+          element.select();
+          document.execCommand('copy');
+          document.body.removeChild(element);
+          const jsFrame = new JSFrame();
+          jsFrame.showToast({
+              html: 'URL Copied', align: 'top', duration: 1000
+          });
+      }
+    </script>
+  </div>
 </div>
+{{ end }}

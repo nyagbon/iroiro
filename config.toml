@@ -1,11 +1,9 @@
-languageCode = "ja-jp"
 title = "イロイロラボ！"
 theme = "mainroad"
-
-# copied from https://github.com/Vimux/Mainroad
-
-baseurl = "/"
+baseurl = "https://iroirolab.com/"
 paginate = "10" # Number of posts per page
+DefaultContentLanguage = "ja"
+languageCode = "ja-jp"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
