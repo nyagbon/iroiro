@@ -1,6 +1,7 @@
 title = "イロイロラボ！"
 theme = "mainroad"
-baseurl = "https://iroirolab.com/"
+#baseurl = "https://iroirolab.com/"
+baseurl = "https://nyagbon.github.io/"
 paginate = "10" # Number of posts per page
 DefaultContentLanguage = "ja"
 languageCode = "ja-jp"
