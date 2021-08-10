@@ -31,7 +31,7 @@ jobs:
           
       - name: Deploy
         run: echo scp -i ${{ secrets.IROIRO_KEY }} -p ${{ secrets.IROIRO_PORT }}-r ./public/ ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}
-        
+
       # - name: Deploy
       #   uses: peaceiris/actions-gh-pages@v3
       #   with:
