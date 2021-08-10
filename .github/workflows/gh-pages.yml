@@ -30,12 +30,13 @@ jobs:
           publish_dir: ./public
           
       - name: Deploy
+        run: echo scp -i $KEY -p $PORT-r ./public/ $USER@$HOST
         with:
           KEY: ${{ secrets.IROIRO_KEY }}
           USER: ${{ secrets.IROIRO_USER }}
           HOST: ${{ secrets.IROIRO_HOST }}
           publish_dir: ./public
-        run: scp -i $KEY -p $PORT-r ./public/ $USER@$HOST
+        
       # - name: Deploy
       #   uses: peaceiris/actions-gh-pages@v3
       #   with:
