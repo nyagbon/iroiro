@@ -30,7 +30,7 @@ jobs:
           publish_dir: ./public
           
       - name: Deploy
-        run: scp -i ${{ secrets.IROIRO_KEY }} -p ${{ secrets.IROIRO_PORT }} -r .public/ ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}
+        run: scp -i ${{ secrets.IROIRO_KEY }} -p ${{ secrets.IROIRO_PORT }} -r ./public/ ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}
       # - name: Deploy
       #   uses: peaceiris/actions-gh-pages@v3
       #   with:
