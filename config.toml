@@ -51,7 +51,7 @@ hasCJKLanguage = true
 [Params.logo]
   # image = "img/placeholder.png" # Logo image. Path relative to "static"
   image = "img/nyago-big.png" # Logo image. Path relative to "static"
-  title = "イロイロラボ！ iroirolab.com" # Logo title, otherwise will use site title
+  title = "イロイロラボ！ iroirolab.com (GitHub Pages 支店)" # Logo title, otherwise will use site title
   subtitle = "にゃごのデジタル実験室(とか戯言とか)" # Logo subtitle
 
 [Params.sidebar]
