@@ -32,7 +32,7 @@ jobs:
       - name: Deploy
         run: |
           echo "${{ secrets.IROIRO_KEY }}" > ./key
-          scp -i ./key -p ${{ secrets.IROIRO_PORT }} -r ./public/ ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}
+          scp -i ./key -p ${{ secrets.IROIRO_PORT }} -r ./public/ ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}:
 
       # - name: Deploy
       #   uses: peaceiris/actions-gh-pages@v3
