@@ -1,0 +1,39 @@
+@import "balloon.css";
+
+.share_outer {
+    border-top: 1px dotted #ebebeb;
+    border-bottom: 1px dotted #ebebeb;
+    text-align: center;
+}
+.share_inner {
+    display: inline-block;
+    text-align: left;
+}
+
+.share_inner .share_button {
+    margin-right:10px;
+    font-size: 20px;
+    color: #aaaaaa;
+}
+
+.fa-hatena:before {
+    content: "B!";
+    font-family: Verdana;
+    font-weight: bold
+}
+
+.twitter:hover {
+    color: #1B95E0;
+}
+.facebook:hover {
+    color: #3B5998;
+}
+.pocket:hover {
+    color: #EE4056;
+}
+.hatena:hover {
+    color: #4BA3D9;
+}
+.copy:hover {
+    color: #808080;
+}
