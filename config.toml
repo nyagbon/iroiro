@@ -6,6 +6,7 @@ DefaultContentLanguage = "ja"
 languageCode = "ja-jp"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+hasCJKLanguage = true
 
 [Author] # Used in authorbox
   name = "にゃご"

@@ -16,7 +16,7 @@ menu: side
 thumbnail: "img/placeholder.jpg" # Thumbnail image
 lead: "Example lead - highlighted near the title" # Lead text
 comments: true # Enable Disqus comments for specific page
-#draft: true
+draft: true
 ---
 
 ## あおいうえお
