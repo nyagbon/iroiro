@@ -31,7 +31,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.IROIROLAB_000_HUGO_000_SITE_000_REPOSITORY }}
           external_repository: iroirolab.com/iroiro.git
           publish_branch: main
           cname: iroirolab.com
