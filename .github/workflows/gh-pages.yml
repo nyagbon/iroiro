@@ -28,7 +28,19 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          
+       
+      - name: Publish
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: ./public/*
+          remote: ~/public
+          host: ${{ secrets.IROIRO_HOST }}
+          port: ${{ secrets.IROIRO_PORT }}
+          user: ${{ secrets.IROIRO_USER }}
+          key: ${{ secrets.IROIRO_KEY }}
+
+// Parameters with prefix 'proxy' are optional.
+
       - name: SCP Upload
         uses: betanzos/scp-upload@v1
         with:
