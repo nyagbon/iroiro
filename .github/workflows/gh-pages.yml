@@ -29,13 +29,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           
-      - name: Deploy
-        env:
-          KEY: ${{ secrets.IROIRO_KEY }}
-        run: |
-          mkdir .ssh
-          cat >> .ssh/key
-          chmod 700 .ssh
-          chmod 600 .ssh/key
-          cat .ssh/key
-          scp -i .ssh/key -P ${{ secrets.IROIRO_PORT }} -r ./public ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}:
+      - name: SCP Upload
+        uses: betanzos/scp-upload@v1
+        with: ./public
+        port: ${{ secrets.IROIRO_PORT }}
+        username: ${{ secrets.IROIRO_USER }}
+        key: ${{ secrets.IROIRO_KEY }}
+        remote_dir: '~'
