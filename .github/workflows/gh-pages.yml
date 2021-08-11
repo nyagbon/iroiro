@@ -23,11 +23,11 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Pre-Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      # - name: Pre-Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./public
        
       - name: Publish
         uses: nogsantos/scp-deploy@master
@@ -38,13 +38,3 @@ jobs:
           port: ${{ secrets.IROIRO_PORT }}
           user: ${{ secrets.IROIRO_USER }}
           key: ${{ secrets.IROIRO_KEY }}
-
-      - name: SCP Upload
-        uses: betanzos/scp-upload@v1
-        with:
-          source: ./public
-          port: ${{ secrets.IROIRO_PORT }}
-          host: ${{ secrets.IROIRO_HOST }}
-          username: ${{ secrets.IROIRO_USER }}
-          key: ${{ secrets.IROIRO_KEY }}
-          remote_dir: '~'
