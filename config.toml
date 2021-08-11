@@ -21,6 +21,7 @@ hasCJKLanguage = true
 [Params]
   description = "Nyago's personal blog about everything, mainly about digital stuff" # Site description. Used in meta description
   copyright = "iroirolab.com" # Footer copyright holder, otherwise will use site title
+  images = [ "img/nyago-big.png" ]
   opengraph = true # Enable OpenGraph if true
   schema = true # Enable Schema
   twitter_cards = true # Enable Twitter Cards if true
