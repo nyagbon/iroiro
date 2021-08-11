@@ -36,11 +36,3 @@ jobs:
           chmod 700 .ssh
           chmod 600 .ssh/key
           scp -i .ssh/key -P ${{ secrets.IROIRO_PORT }} -r ./public ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}:
-
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     deploy_key: ${{ secrets.IROIROLAB_000_HUGO_000_SITE_000_REPOSITORY }}
-      #     external_repository: iroirolab.com:iroiro.git
-      #     publish_branch: main
-      #     cname: iroirolab.com
