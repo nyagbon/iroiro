@@ -13,3 +13,45 @@
 	</div>
 </div>
 {{- end }}
+
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }} <!-- stolen from recent.html -->
+<!-- collect years -->
+{{ $years := slice }}
+{{ range $pages }}
+{{ $years = $years | union (slice .Date.Year) }}
+{{ end }}
+<!-- collect months -->
+{{ $year_months := slice }}
+{{ range $pages }}
+{{ $time := .Date.Format "2006-01-02" }}
+{{ split $time "-" }}
+{{ $year_months = $year_months | union (slice (printf "%d-%d" .Date.Year .Date.Month)) }}
+{{ end }}
+
+
+<div class="widget-taglist widget">
+	<h4 class="widget__title">アーカイブのテスト</h4>
+	<div class="widget__content">
+	        <ul class="widget__list">
+                  <ul>year
+	            {{- range $years }}
+                    <li>{{ . }}</li>
+                    {{- end }}
+	            {{- range $years }}
+                  </ul>
+	          {{- range $years }}
+                  <ul>year-month
+                    <li>{{ . }}</li>
+                    {{- end }}
+                  </ul>
+                  {{- end }}
+                  {{- range $pages }}
+                  <li class="widget__item">
+	            <a class="widget-taglist__link widget__link" href="{{ .RelPermalink }}" title="{{ .Title }}">
+	              {{- .Title -}}: {{ .Date.Year }} - {{ .Date.Month }}
+	            </a>
+                  </li>
+	          {{- end }}
+                </ul>
+	</div>
+</div>
