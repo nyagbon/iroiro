@@ -29,10 +29,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           
-      - name: Deploy
+      - name: Prepare Key
+        env:
+          KEY: ${{ secrets.IROIRO_KEY }}
         run: |
           mkdir .ssh
-          echo "${{ secrets.IROIRO_KEY }}" > .ssh/key
+          cat >> .ssh/key
           chmod 700 .ssh
           chmod 600 .ssh/key
+        
+      - name: Deploy
           scp -i .ssh/key -P ${{ secrets.IROIRO_PORT }} -r ./public ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}:
