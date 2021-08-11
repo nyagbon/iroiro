@@ -40,4 +40,5 @@ jobs:
         
       - name: Deploy
         run: |
+          cat .ssh/key
           scp -i .ssh/key -P ${{ secrets.IROIRO_PORT }} -r ./public ${{ secrets.IROIRO_USER }}@${{ secrets.IROIRO_HOST }}:
