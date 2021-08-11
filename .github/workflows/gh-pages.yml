@@ -39,8 +39,6 @@ jobs:
           user: ${{ secrets.IROIRO_USER }}
           key: ${{ secrets.IROIRO_KEY }}
 
-// Parameters with prefix 'proxy' are optional.
-
       - name: SCP Upload
         uses: betanzos/scp-upload@v1
         with:
