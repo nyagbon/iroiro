@@ -31,8 +31,9 @@ jobs:
           
       - name: SCP Upload
         uses: betanzos/scp-upload@v1
-        with: ./public
-        port: ${{ secrets.IROIRO_PORT }}
-        username: ${{ secrets.IROIRO_USER }}
-        key: ${{ secrets.IROIRO_KEY }}
-        remote_dir: '~'
+        with:
+          source: ./public
+          port: ${{ secrets.IROIRO_PORT }}
+          username: ${{ secrets.IROIRO_USER }}
+          key: ${{ secrets.IROIRO_KEY }}
+          remote_dir: '~'
