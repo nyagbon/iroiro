@@ -11,8 +11,8 @@ hasCJKLanguage = true
 
 [Author] # Used in authorbox
   name = "にゃご"
-  bio = "テレワーク太り"
-  avatar = "img/nyago-big.png"
+  bio = "テレワーク太り。Python 好き。Emacs 使い。デジタルガジェット好き。大阪生まれ東京育ち。会社員。PC-6001 が原体験。$\\rm{\\TeX}$ 世代。"
+  avatar = "img/mymii.png"
 
 [Permalinks]
   post = "/:sections/:year/:month/:slug/"
@@ -26,7 +26,7 @@ hasCJKLanguage = true
   schema = true # Enable Schema
   twitter_cards = true # Enable Twitter Cards if true
   readmore = true # Show "Read more" button in list if true
-  authorbox = false # Show authorbox at bottom of pages if true
+  authorbox = true # Show authorbox at bottom of pages if true
   toc = false # Enable Table of Contents
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   # post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
