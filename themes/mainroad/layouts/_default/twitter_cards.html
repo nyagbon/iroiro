@@ -4,4 +4,4 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ .Summary }}" />
-<meta property="og:image" content="{{ if (isset .Params "thumbnail") }}{{ .Params.Thumbnail }}{{ else }}{{ index .Site.Params.Images 0 }}{{ end }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ if (isset .Params "thumbnail") }}{{ .Params.Thumbnail }}{{ else }}{{ index .Site.Params.Images 0 }}{{ end }}" />
