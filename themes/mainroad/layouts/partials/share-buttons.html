@@ -1,10 +1,11 @@
 {{ if ne .Params.share false}}
 <div class="share_outer">
   <div class="share_inner">
-    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" class="share_button twitter" aria-label="Share on Twtter" data-balloon-pos="up"><i class="fab fa-twitter"></i></a>
-    <a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}&t={{ .Title }}" target="_blank" class="share_button facebook" aria-label="Share on Facebook" data-balloon-pos="up"><i class="fab fa-facebook"></i></a>
-    <a href="https://getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share_button pocket" aria-label="Save to Pocket" data-balloon-pos="up"><i class="fab fa-get-pocket"></i></a>
-    <a href="https://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share_button hatena" aria-label="Bookmark on Hatena" data-balloon-pos="up"><i class="fab fa-hatena"></i></a>
+    {{ $text := printf "%s - %s - %s" .Title (dateFormat "2006-01-02" .Date) .Site.Title }}
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ $text }}" target="_blank" class="share_button twitter" aria-label="Share on Twtter" data-balloon-pos="up"><i class="fab fa-twitter"></i></a>
+    <a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}&t={{ $text }}" target="_blank" class="share_button facebook" aria-label="Share on Facebook" data-balloon-pos="up"><i class="fab fa-facebook"></i></a>
+    <a href="https://getpocket.com/edit?url={{ .Permalink }}&title={{ $text }}" target="_blank" class="share_button pocket" aria-label="Save to Pocket" data-balloon-pos="up"><i class="fab fa-get-pocket"></i></a>
+    <a href="https://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink }}&title={{ $text }}" target="_blank" class="share_button hatena" aria-label="Bookmark on Hatena" data-balloon-pos="up"><i class="fab fa-hatena"></i></a>
     <span class="share_button copy" aria-label="Copy URL" data-balloon-pos="up" onclick="copyurl()"><i class="far fa-clone"></i></span>
     <script>
       function copyurl() {
