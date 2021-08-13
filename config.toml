@@ -8,6 +8,7 @@ languageCode = "ja-jp"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 hasCJKLanguage = true
+enableEmoji = true
 
 [Author] # Used in authorbox
   name = "にゃご"
@@ -61,9 +62,14 @@ hasCJKLanguage = true
   single = true # Configure layout for single pages
   # Enable widgets in given order
   # widgets = ["search", "recent", "categories", "taglist", "social"]
-  widgets = ["recent", "categories", "taglist", "social"]
+  widgets = ["recent", "categories", "taglist", "archives", "social"]
   # alternatively "ddg-search" can be used, to search via DuckDuckGo
   # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
 
 [Params.widgets]
   recent_num = 10 # Set the number of articles in the "Recent articles" widget

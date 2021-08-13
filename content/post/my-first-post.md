@@ -7,6 +7,8 @@ categories:
 #tags:
 #    - "Blog"
 thumbnail: "img/hanzai_yamisaito.png"
+archives:
+    - 2021-08
 #draft: true
 ---
 お盆休みにようやく今までチマチマ準備を進めていたサイトが公開できました。
