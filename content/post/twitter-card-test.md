@@ -24,8 +24,21 @@ my_twitter_card.html:
 config.toml:
 ```toml
 [Params]
-  my_twitter_cards = true
+  twitter_cards = false # デフォルトの Twitter Card の定義を disable
+  my_twitter_cards = true # オレオレのを enable
   my_twitter_card_type = "summary"
+```
+
+baseof.html:
+```html
+	{{- if .Site.Params.twitter_cards }}
+		{{ template "_internal/twitter_cards.html" . }}
+	{{- end }}
+    <!-- ↓ここから追加 -->
+	{{- if .Site.Params.my_twitter_cards }}
+		{{ template "_default/my_twitter_cards.html" . }}
+	{{- end }}
+    <!-- ↑ここまで追加 -->
 ```
 
 ## Twitter Card とは？
@@ -56,5 +69,7 @@ Hugo のデフォルトだと画像が常に「サイトの画像（ここだと
 - `twitter:card` - 「カードタイプ」:`summary`, `summary_large_image`, `app`, `player` のどれか
 - `twtter:site` - カードの footer に使われる「@username」を指定 (なくても良い)
 - `twtter:creator` - コンテンツの作者・著者の「@username」を指定 (なくても良い)
+
+で、Card vaildator で Twitter Card が正しく設定されているか確認できる。
 
 とりあえずここまででやってみる。
