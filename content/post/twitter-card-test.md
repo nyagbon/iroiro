@@ -3,7 +3,7 @@ title: "Twitter Card のテスト"
 date: 2021-08-13T21:12:00+09:00
 slug: twitter-card-test
 categories: [ Site ]
-tags: [ Hugo ]
+tags: [ Hugo, Twitter ]
 archives: [ 2021-08 ]
 thumbnail: "img/bluebird_baka.png"
 #draft: true
