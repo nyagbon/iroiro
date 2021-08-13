@@ -6,7 +6,7 @@
 	{{- range $name, $taxonomy := $tags }}
 		{{- with $.Site.GetPage (printf "/tags/%s" $name) }}
 		<a class="widget-taglist__link widget__link btn" href="{{ .RelPermalink }}" title="{{ .Title }}">
-			{{- .Title -}}{{- if .Site.Params.widgets.tags_counter }} ({{ $taxonomy.Count }}){{ end -}}
+			{{- .Title -}}{{- if .Site.Params.widgets.tags_counter }}&nbsp;<span class="widget__counter widget__counter--bubble-dark">{{ $taxonomy.Count }}</span>{{ end -}}
 		</a>
 		{{- end }}
 	{{- end }}
