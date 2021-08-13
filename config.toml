@@ -26,6 +26,7 @@ enableEmoji = true
   schema = true # Enable Schema
   twitter_cards = false # Enable Twitter Cards if true
   my_twitter_cards = true # Enable My Own Twitter Cards if true
+  my_twitter_card_type = "summary" # card type, one of summary, summary_large_image, app, or player
   readmore = true # Show "Read more" button in list if true
   authorbox = true # Show authorbox at bottom of pages if true
   toc = false # Enable Table of Contents

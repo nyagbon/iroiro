@@ -10,16 +10,22 @@ thumbnail: "img/bluebird_baka.png"
 ---
 Hugo の Twitter Card の情報を自分で作るようにしてみたのでテスト。
 
-```html
 my_twitter_card.html:
-
-<meta name="twitter:card" content="{{ .Summary }}" />
+```html
+<meta name="twitter:card" content="{{ .Site.Params.my_twitter_card_type }}" />
 <meta name="twitter:site" content="@{{ .Site.Params.widgets.social.twitter }}" />
 <meta name="twitter:creator" content="@{{ .Site.Params.widgets.social.twitter }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ .Summary }}" />
-<meta property="og:image" content="{{ if (isset .Params "thumbnail") }}{{ .Params.Thumbnail }}{{ else }}{{ index .Site.Params.Images 0 }}{{ end }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ if (isset .Params "thumbnail") }}{{ .Params.Thumbnail }}{{ else }}{{ index .Site.Params.Images 0 }}{{ end }}" />
+```
+
+config.toml:
+```toml
+[Params]
+  my_twitter_cards = true
+  my_twitter_card_type = "summary"
 ```
 
 ## Twitter Card とは？
@@ -35,3 +41,20 @@ Hugo のデフォルトだと画像が常に「サイトの画像（ここだと
 **んだよ！ (#ﾟДﾟ)ｺﾞﾙｧ!!**
 
 ってことで。ちょっとお試しでーす。
+
+## ちゃんと本家ドキュメント読めと
+
+**(・ω<) てへぺろ**
+
+いい加減な情報と勘でやっちゃダメね！
+
+- [Cards - Getting Started Guide - Twitter Developer Platform](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started)
+- [Card validator - Twitter Developer](https://cards-dev.twitter.com/validator)
+
+ええと、"Getting Started Guide" によると…
+
+- `twitter:card` - 「カードタイプ」:`summary`, `summary_large_image`, `app`, `player` のどれか
+- `twtter:site` - カードの footer に使われる「@username」を指定 (なくても良い)
+- `twtter:creator` - コンテンツの作者・著者の「@username」を指定 (なくても良い)
+
+とりあえずここまででやってみる。
