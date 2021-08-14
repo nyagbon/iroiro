@@ -10,8 +10,7 @@ thumbnail: "img/bluebird_baka.png"
 ---
 Hugo の Twitter Card の情報を自分で作るようにしてみたのでテスト。
 
-my_twitter_card.html:
-```html
+```go-html-template {name=my_twitter_card.html}
 <meta name="twitter:card" content="{{ .Site.Params.my_twitter_card_type }}" />
 <meta name="twitter:site" content="@{{ .Site.Params.widgets.social.twitter }}" />
 <meta name="twitter:creator" content="@{{ .Site.Params.widgets.social.twitter }}" />
@@ -21,24 +20,24 @@ my_twitter_card.html:
 <meta property="og:image" content="{{ .Site.BaseURL }}{{ if (isset .Params "thumbnail") }}{{ .Params.Thumbnail }}{{ else }}{{ index .Site.Params.Images 0 }}{{ end }}" />
 ```
 
-config.toml:
-```toml
+```toml {name=config.toml}
 [Params]
   twitter_cards = false # デフォルトの Twitter Card の定義を disable
   my_twitter_cards = true # オレオレのを enable
   my_twitter_card_type = "summary"
 ```
 
-baseof.html:
-```html
-	{{- if .Site.Params.twitter_cards }}
-		{{ template "_internal/twitter_cards.html" . }}
-	{{- end }}
-    <!-- ↓ここから追加 -->
-	{{- if .Site.Params.my_twitter_cards }}
-		{{ template "_default/my_twitter_cards.html" . }}
-	{{- end }}
-    <!-- ↑ここまで追加 -->
+```go-html-template {name=baseof.html,hl_lines=["5-9"]}
+...
+{{- if .Site.Params.twitter_cards }}
+	{{ template "_internal/twitter_cards.html" . }}
+{{- end }}
+<!-- ↓ここから追加 -->
+{{- if .Site.Params.my_twitter_cards }}
+	{{ template "_default/my_twitter_cards.html" . }}
+{{- end }}
+<!-- ↑ここまで追加 -->
+...
 ```
 
 ## Twitter Card とは？

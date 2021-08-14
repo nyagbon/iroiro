@@ -1,0 +1,16 @@
+.with-code-name pre.chroma {
+  margin-top: -29px;
+  padding-top: 40px;
+  padding-bottom: 12px;
+}
+
+.code-name {
+  display: inline-block;
+  position: relative;
+  padding: 4px 8px;
+  margin-left: 1px;
+  background-color: #e0e0e0;
+  color: #204A40;
+  font-size: 13px;
+  font-weight: 400;
+}
