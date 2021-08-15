@@ -9,8 +9,9 @@ disqusShortname = "iroirolab" # Enable Disqus comments by entering your Disqus s
 googleAnalytics = "G-FWNCXL1TP8" # Enable Google Analytics by entering your tracking id
 hasCJKLanguage = true
 enableEmoji = true
-pygmentsUseClasses=true # syntax highlight with chromastyles
-pygmentsCodefences = true  # enable chromastyles also in three backticks
+pygmentsUseClasses= true  # syntax highlight with chromastyles
+pygmentsCodefences = true # enable chromastyles also in three backticks
+enableRobotsTXT = true
 
 [Author] # Used in authorbox
   name = "にゃご"
