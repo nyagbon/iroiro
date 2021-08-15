@@ -38,3 +38,7 @@ jobs:
           port: ${{ secrets.IROIRO_PORT }}
           user: ${{ secrets.IROIRO_USER }}
           key: ${{ secrets.IROIRO_KEY }}
+
+      - name: Ping Google
+        run: curl 'https://www.google.com/ping?sitemap=https://iroirolab.com/sitemap.xml'
+  
