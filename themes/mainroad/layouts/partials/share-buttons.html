@@ -1,7 +1,7 @@
 {{ if ne .Params.share false}}
 <div class="share_outer">
   <div class="share_inner">
-    {{ $text := printf "%s - %s - %s" .Title (dateFormat "2006-01-02" .Date) .Site.Title }}
+    {{ $text := printf "【%s】- %s" .Title .Site.Title }}
     <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ $text }}" target="_blank" class="share_button twitter" aria-label="Share on Twtter" data-balloon-pos="up"><i class="fab fa-twitter"></i></a>
     <a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}&t={{ $text }}" target="_blank" class="share_button facebook" aria-label="Share on Facebook" data-balloon-pos="up"><i class="fab fa-facebook"></i></a>
     <a href="https://getpocket.com/edit?url={{ .Permalink }}&title={{ $text }}" target="_blank" class="share_button pocket" aria-label="Save to Pocket" data-balloon-pos="up"><i class="fab fa-get-pocket"></i></a>
