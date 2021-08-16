@@ -7,7 +7,6 @@ DefaultContentLanguage = "ja"
 languageCode = "ja-jp"
 disqusShortname = "iroirolab" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "G-FWNCXL1TP8" # Enable Google Analytics by entering your tracking id
-googleAdsense = "ca-pub-5611995804803519"
 hasCJKLanguage = true
 enableEmoji = true
 pygmentsUseClasses= true  # syntax highlight with chromastyles
