@@ -48,6 +48,9 @@
 		{{- else }}
 		{{ template "_internal/google_analytics_async.html" . }}
 		{{- end }}
+                {{- if .Site.GoogleAdsense }}
+                <script data-ad-client="{{ .Site.GoogleAdsense }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                {{- end }}
 	{{- end }}
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
