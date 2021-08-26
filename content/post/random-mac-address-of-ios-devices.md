@@ -5,7 +5,7 @@ slug: random-mac-address-of-ios-devices
 categories: [ Tech ]
 tags: [ iOS, Network ]
 archives: [ 2021-08 ]
-#draft: true
+draft: true
 ---
 今、ウチの DHCP サーバは WiFi ルータ搭載の DHCP サーバを使ってます。
 
