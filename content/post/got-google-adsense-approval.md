@@ -32,7 +32,7 @@ thumbnail: "img/koukoku_web_pc.png"
 
 ちなみに、こんなメールが送られてきました。
 
-![お客様のサイトで AdSense 広告を配信する準備が整いました](/img/adsense-mail.jpg)
+![お客様のサイトで AdSense 広告を配信する準備が整いました](/img/google-koukoku-mail.jpg)
 
 明日にでも「ご利用開始」ボタンを押したいと思います。ポチッとな。(｡･ω･｡)ﾉ凸”ﾎﾟﾁｯ
 
